@@ -805,6 +805,240 @@ const selectedOptions = new Set();
       "question": "What are some of the principles that define a hyperscaler? (Note: There are 3 correct answers to this question.)",
       "options": ["Favor managed services", "Be smart with state", "Favor close proximity", "Always be architecting", "Configure secure VPN"],
       "correct": ["Favor managed services", "Be smart with state", "Always be architecting"]
+    },
+    {
+      "id": "112",
+      "question": "What is the purpose of the CAP `cds.connect()` method?",
+      "options": ["Establishing a connection to a service", "Managing user roles", "Optimizing query performance"],
+      "correct": ["Establishing a connection to a service"]
+    },
+    {
+      "id": "113",
+      "question": "Which class in CAP is used for handling application services?",
+      "options": ["cds.ApplicationService", "cds.RemoteService", "cds.DatabaseService"],
+      "correct": ["cds.ApplicationService"]
+    },
+    {
+      "id": "114",
+      "question": "What is the role of the `cds.create()` method in CAP?",
+      "options": ["Creating new database entries", "Compiling models", "Connecting to external services"],
+      "correct": ["Creating new database entries"]
+    },
+    {
+      "id": "115",
+      "question": "Which of the following is a key aspect of CAP's extensibility?",
+      "options": ["Feature Toggles", "Service Definitions", "Query Optimization"],
+      "correct": ["Feature Toggles"]
+    },
+    {
+      "id": "116",
+      "question": "How does CAP handle the versioning of services?",
+      "options": ["Through versioning in service definitions", "By creating separate databases", "By updating the UI components"],
+      "correct": ["Through versioning in service definitions"]
+    },
+    {
+      "id": "117",
+      "question": "Which method is used for parsing CAP models?",
+      "options": ["cds.parse()", "cds.compile()", "cds.load()"],
+      "correct": ["cds.parse()"]
+    },
+    {
+      "id": "118",
+      "question": "What feature of CAP allows for handling complex business rules?",
+      "options": ["Custom Logic in Actions & Functions", "Data Annotations", "UI Customization"],
+      "correct": ["Custom Logic in Actions & Functions"]
+    },
+    {
+      "id": "119",
+      "question": "What does `cds.minify()` do in CAP?",
+      "options": ["Minifies CAP models to reduce size", "Compiles CAP models", "Validates data"],
+      "correct": ["Minifies CAP models to reduce size"]
+    },
+    {
+      "id": "120",
+      "question": "Which method is used to manage service endpoints in CAP?",
+      "options": ["cds.serve()", "cds.connect()", "cds.define()"],
+      "correct": ["cds.serve()"]
+    },
+    {
+      "id": "121",
+      "question": "In CAP, what is the function of `cds.reflect()`?",
+      "options": ["Examining the structure of CDS models", "Managing service requests", "Executing database queries"],
+      "correct": ["Examining the structure of CDS models"]
+    },
+    {
+      "id": "122",
+      "question": "What role does `cds. auth` play in CAP?",
+      "options": ["Handles authorization for CAP applications", "Defines data models", "Generates reports"],
+      "correct": ["Handles authorization for CAP applications"]
+    },
+    {
+      "id": "123",
+      "question": "Which CAP method is used to execute database queries?",
+      "options": ["cds.query()", "cds.execute()", "cds.run()"],
+      "correct": ["cds.query()"]
+    },
+    {
+      "id": "124",
+      "question": "How does CAP support transactional outbox patterns?",
+      "options": ["Using `cds.outboxed()`", "By creating separate services", "By configuring database triggers"],
+      "correct": ["Using `cds.outboxed()`"]
+    },
+    {
+      "id": "125",
+      "question": "What is the purpose of `cds.log()` in CAP?",
+      "options": ["Logging application events and errors", "Defining new services", "Managing user authentication"],
+      "correct": ["Logging application events and errors"]
+    },
+    {
+      "id": "126",
+      "question": "Which method is used to handle CAP plugins?",
+      "options": ["cds.plugins", "cds.manage()", "cds.config()"],
+      "correct": ["cds.plugins"]
+    },
+    {
+      "id": "127",
+      "question": "What is the primary focus of CAP's `cds.i18n` support?",
+      "options": ["Internationalization and localization", "Database schema management", "Service endpoint configuration"],
+      "correct": ["Internationalization and localization"]
+    },
+    {
+      "id": "128",
+      "question": "Which CAP class represents a messaging service?",
+      "options": ["cds.MessagingService", "cds.DatabaseService", "cds.RemoteService"],
+      "correct": ["cds.MessagingService"]
+    },
+    {
+      "id": "129",
+      "question": "What is the purpose of `cds.env` in CAP?",
+      "options": ["Accessing environment variables", "Managing user roles", "Handling database migrations"],
+      "correct": ["Accessing environment variables"]
+    },
+    {
+      "id": "130",
+      "question": "How can CAP applications be tested?",
+      "options": ["Using `cds.test()`", "By deploying to production", "Through manual testing only"],
+      "correct": ["Using `cds.test()`"]
+    },
+    {
+      "id": "131",
+      "question": "Which tool helps in validating CAP models for errors?",
+      "options": ["CDS Lint", "CAP CLI", "SAP Business Application Studio"],
+      "correct": ["CDS Lint"]
+    },
+    {
+      "id": "132",
+      "question": "What is the role of the `cds.outboxed()` method?",
+      "options": ["Handles transactional outbox patterns", "Compiles CAP models", "Defines data models"],
+      "correct": ["Handles transactional outbox patterns"]
+    },
+    {
+      "id": "133",
+      "question": "Which CAP method is used to load a CDS model?",
+      "options": ["cds.load()", "cds.import()", "cds.parse()"],
+      "correct": ["cds.load()"]
+    },
+    {
+      "id": "134",
+      "question": "What is the primary purpose of `cds.compile()`?",
+      "options": ["Compiling CAP models into executable formats", "Defining new services", "Managing environment configurations"],
+      "correct": ["Compiling CAP models into executable formats"]
+    },
+    {
+      "id": "135",
+      "question": "Which CAP method is used to define a new service?",
+      "options": ["cds.Service", "cds.define()", "cds.create()"],
+      "correct": ["cds.Service"]
+    },
+    {
+      "id": "136",
+      "question": "What does `cds.query()` enable you to do in CAP?",
+      "options": ["Perform database queries", "Define new services", "Handle user authentication"],
+      "correct": ["Perform database queries"]
+    },
+    {
+      "id": "137",
+      "question": "Which method in CAP helps to handle service requests?",
+      "options": ["cds.serve()", "cds.query()", "cds.load()"],
+      "correct": ["cds.serve()"]
+    },
+    {
+      "id": "138",
+      "question": "How can CAP support performance optimization?",
+      "options": ["By following best practices and guidelines", "By using default settings", "By avoiding customizations"],
+      "correct": ["By following best practices and guidelines"]
+    },
+    {
+      "id": "139",
+      "question": "What is the function of `cds.reflect()` in CAP?",
+      "options": ["Reflecting on the structure of CDS models", "Managing service endpoints", "Executing database queries"],
+      "correct": ["Reflecting on the structure of CDS models"]
+    },
+    {
+      "id": "140",
+      "question": "Which CAP class is used to define a new entity?",
+      "options": ["cds.entity", "cds.Service", "cds.ApplicationService"],
+      "correct": ["cds.entity"]
+    },
+    {
+      "id": "141",
+      "question": "What does `cds.tx()` manage in CAP?",
+      "options": ["Database transactions", "UI rendering", "Service definitions"],
+      "correct": ["Database transactions"]
+    },
+    {
+      "id": "142",
+      "question": "Which CAP method is used for parsing models?",
+      "options": ["cds.parse()", "cds.compile()", "cds.load()"],
+      "correct": ["cds.parse()"]
+    },
+    {
+      "id": "143",
+      "question": "What is the main function of `cds.load()`?",
+      "options": ["Loading CAP models", "Defining new services", "Handling transactions"],
+      "correct": ["Loading CAP models"]
+    },
+    {
+      "id": "144",
+      "question": "Which CAP feature supports managing service versioning?",
+      "options": ["Service Definitions", "Feature Toggles", "Data Annotations"],
+      "correct": ["Service Definitions"]
+    },
+    {
+      "id": "145",
+      "question": "What is the role of `cds.plugins` in CAP?",
+      "options": ["Managing CAP plugins", "Compiling models", "Handling service requests"],
+      "correct": ["Managing CAP plugins"]
+    },
+    {
+      "id": "146",
+      "question": "How does CAP support localization?",
+      "options": ["By using localization annotations", "By optimizing query performance", "By defining new services"],
+      "correct": ["By using localization annotations"]
+    },
+    {
+      "id": "147",
+      "question": "Which CAP method would you use for handling errors?",
+      "options": ["cds.log()", "cds.error()", "cds.handle()"],
+      "correct": ["cds.log()"]
+    },
+    {
+      "id": "148",
+      "question": "Which CAP class is responsible for handling remote service calls?",
+      "options": ["cds.RemoteService", "cds.DatabaseService", "cds.ApplicationService"],
+      "correct": ["cds.RemoteService"]
+    },
+    {
+      "id": "149",
+      "question": "What does `cds.auth` manage in CAP applications?",
+      "options": ["Authorization and permissions", "Service definitions", "Database schemas"],
+      "correct": ["Authorization and permissions"]
+    },
+    {
+      "id": "150",
+      "question": "Which CAP method is used to define actions and functions?",
+      "options": ["cds.defineActions()", "cds.create()", "cds.define()"],
+      "correct": ["cds.define()"]
     }
   ];
 
