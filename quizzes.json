@@ -1,0 +1,12 @@
+[
+    {
+        "question": "What do you use to retrieve the information about a change on the repository?",
+        "options": ["A webhook", "A change document", "A PUT request to GitHub"],
+        "answer": "A webhook"
+    },
+    {
+        "question": "After what period of time does GitHub remove unused personal access tokens?",
+        "options": ["1 month", "100 days", "1 year", "28 days"],
+        "answer": "1 year"
+    }
+]
