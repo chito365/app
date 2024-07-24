@@ -679,6 +679,132 @@ const selectedOptions = new Set();
       "question": "Where do you design an integration flow? (Developing with SAP Integration Suite/Explaining Distributed Architecture and Their Challenges)",
       "options": ["Using the API Management tile.", "SAP Business Accelerator Hub", "Extend non-SAP connectivity.", "Design → Integrations tab into the Integration Suite."],
       "correct": ["Design → Integrations tab into the Integration Suite."]
+    },
+    {
+      "id": "91",
+      "question": "In which hyperscaler environment could you test scheduled upcoming changes to your virtual machine?",
+      "options": ["Functionality test environment", "Newly created virtual machine", "There is no such environment", "Preview environment"],
+      "correct": ["Preview environment"]
+    },
+    {
+      "id": "92",
+      "question": "Why is it important to communicate with the hyperscaler prior to running a performance test?",
+      "options": ["To avoid adding additional database space", "To avoid additional firewall rules", "To avoid triggering DDoS protection", "To avoid automatic scaling of hardware"],
+      "correct": ["To avoid triggering DDoS protection"]
+    },
+    {
+      "id": "93",
+      "question": "Which personas may be needed or changed when running solutions on a hyperscaler? (Note: There are 3 correct answers to this question.)",
+      "options": ["Windows server administrator", "Security administrator", "SAP accountant", "Cloud architect", "SAP Basis administrator"],
+      "correct": ["Security administrator", "Cloud architect", "SAP Basis administrator"]
+    },
+    {
+      "id": "94",
+      "question": "What is the major contributor to wasted cloud spend?",
+      "options": ["Vertical scaling of instances", "Reserved instances", "Misconfigured instances", "Wrongly sized instances"],
+      "correct": ["Wrongly sized instances"]
+    },
+    {
+      "id": "95",
+      "question": "What type of testing should be included in the cloud migration plan? (Note: There are 3 correct answers to this question.)",
+      "options": ["Unit testing", "Performance testing", "Regression testing", "Non-functional testing", "Functional testing"],
+      "correct": ["Performance testing", "Regression testing", "Non-functional testing"]
+    },
+    {
+      "id": "96",
+      "question": "What type of compute instance is required to run a high-memory instance for SAP HANA on a hyperscaler platform?",
+      "options": ["General purpose instances", "On-demand instances", "Spot instances", "Reserved or dedicated instances"],
+      "correct": ["Reserved or dedicated instances"]
+    },
+    {
+      "id": "97",
+      "question": "What type of attack can you prevent by monitoring for intrusions to keep systems available?",
+      "options": ["SOdD", "DoSA", "AoDD", "DDoS"],
+      "correct": ["DDoS"]
+    },
+    {
+      "id": "98",
+      "question": "What is one of the secure ways you can connect to your cloud infrastructure?",
+      "options": ["Azure ExpressRoute", "AWS Elastic Load Balancer", "SAP Secure Connect", "SAP Router"],
+      "correct": ["Azure ExpressRoute"]
+    },
+    {
+      "id": "99",
+      "question": "Which security certification should be part of any hyperscaler infrastructure?",
+      "options": ["Security Clearance Level 5", "SAP Basis certified", "ISO 27001 certified", "Azure AD certified"],
+      "correct": ["ISO 27001 certified"]
+    },
+    {
+      "id": "100",
+      "question": "Which on-premise aspects are still relevant when hosting SAP on-premise solutions on a hyperscaler IaaS cloud? (Note: There are 3 correct answers to this question.)",
+      "options": ["General SAP architecture", "Cloud SLA", "Data center strategy", "Sizing", "Hybrid integration"],
+      "correct": ["General SAP architecture", "Data center strategy", "Sizing"]
+    },
+    {
+      "id": "101",
+      "question": "Which type of deployment model is used in the Google Cloud Platform reference architecture for SAP S/4HANA?",
+      "options": ["Remote deployment", "Embedded deployment", "Distributed deployment", "Co-deployment"],
+      "correct": ["Distributed deployment"]
+    },
+    {
+      "id": "102",
+      "question": "Which AWS service provides an easy and automated way to deploy AWS reference architectures for SAP HANA?",
+      "options": ["Amazon CloudWatch", "AWS Quick Starts", "AWS CloudFormation", "SAP HANA media bucket"],
+      "correct": ["AWS Quick Starts"]
+    },
+    {
+      "id": "103",
+      "question": "What are the important considerations when choosing the vertical landscape rollout strategy? (Note: There are 2 correct answers to this question.)",
+      "options": ["Create migration groups to move tightly connected SAP applications together.", "Start by migrating all SAP systems in the Test environment.", "Carefully consider the impact on SAP applications that are tightly connected.", "Migrate shared services components together with SAP systems.", "Consider the impact on cloud interfaces."],
+      "correct": ["Create migration groups to move tightly connected SAP applications together.", "Carefully consider the impact on SAP applications that are tightly connected."]
+    },
+    {
+      "id": "104",
+      "question": "Which phase of the cloud migration methodology usually runs in an iterative manner?",
+      "options": ["Optimization and Operations", "Adoption and Migration", "Strategy and Planning", "Preparation and Discovery"],
+      "correct": ["Adoption and Migration"]
+    },
+    {
+      "id": "105",
+      "question": "Which of the following is an interface technology available on a hyperscaler?",
+      "options": ["Process Optimization", "Process Orchestration", "Process Builder", "Process Interfaces"],
+      "correct": ["Process Orchestration"]
+    },
+    {
+      "id": "106",
+      "question": "What is a key difference for many companies when it comes to testing strategies on a hyperscaler like Google Cloud Platform (GCP)?",
+      "options": ["Separation of ownership between SAP hardware and GCP hardware", "Separation of ownership between data center and infrastructure", "Separation of ownership between SAP S/4HANA and SAP Business Technology Platform", "Separation of ownership between application and infrastructure"],
+      "correct": ["Separation of ownership between application and infrastructure"]
+    },
+    {
+      "id": "107",
+      "question": "Where can you find information about certified hardware and the supported infrastructure to run SAP applications on public cloud IaaS platforms? (Note: There are 2 correct answers to this question.)",
+      "options": ["SAP Help Portal", "SAP certified solutions directory", "IaaS platform-relevant SAP Notes", "SAP Cloud Appliance Library", "Certified and supported SAP HANA hardware directory"],
+      "correct": ["IaaS platform-relevant SAP Notes", "Certified and supported SAP HANA hardware directory"]
+    },
+    {
+      "id": "108",
+      "question": "Which of the following deployment types does the hybrid landscape that enterprises are using to consume SAP applications and offerings consists of? (Note: There are 3 correct answers to this question.)",
+      "options": ["Private hosted cloud", "PaaS cloud", "Private cloud", "Community cloud", "Corporate cloud"],
+      "correct": ["Private hosted cloud", "PaaS cloud", "Private cloud"]
+    },
+    {
+      "id": "109",
+      "question": "What is one common reason a company would move to a hyperscaler?",
+      "options": ["Hyperscalers are only available in your country.", "Hyperscalers provide easier access to SAP applications.", "Hyperscalers allow for automation.", "Hyperscaler infrastructures are more secure."],
+      "correct": ["Hyperscalers allow for automation."]
+    },
+    {
+      "id": "110",
+      "question": "What is one of the cloud models that a hyperscaler provides?",
+      "options": ["DaaS", "SaaX", "FaaS", "PaaS"],
+      "correct": ["PaaS"]
+    },
+    {
+      "id": "111",
+      "question": "What are some of the principles that define a hyperscaler? (Note: There are 3 correct answers to this question.)",
+      "options": ["Favor managed services", "Be smart with state", "Favor close proximity", "Always be architecting", "Configure secure VPN"],
+      "correct": ["Favor managed services", "Be smart with state", "Always be architecting"]
     }
   ];
 
