@@ -5,7 +5,8 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background-color: #0a69ed;
+  background-color: #121212;
+  color: #e0e0e0;
 }
 .start-screen,
 .score-container {
@@ -22,6 +23,8 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+  background-color: #1f1f1f;
+  color: #e0e0e0;
 }
 #start-button,
 #restart {
@@ -33,7 +36,7 @@ button {
   margin-top: 0.9em;
 }
 #display-container {
-  background-color: #ffffff;
+  background-color: #1e1e1e;
   padding: 3.1em 1.8em;
   width: 80%;
   max-width: 37.5em;
@@ -43,6 +46,7 @@ button {
   top: 50%;
   left: 50%;
   border-radius: 0.6em;
+  color: #e0e0e0;
 }
 .header {
   margin-bottom: 1.8em;
@@ -50,10 +54,10 @@ button {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 0.6em;
-  border-bottom: 0.1em solid #c0bfd2;
+  border-bottom: 0.1em solid #424242;
 }
 .timer-div {
-  background-color: #e1f5fe;
+  background-color: #424242;
   width: 7.5em;
   border-radius: 1.8em;
   display: flex;
@@ -72,12 +76,13 @@ button {
   margin: 0.3em 0;
   text-align: left;
   outline: none;
-  background: transparent;
-  border: 1px solid #c0bfd2;
+  background: #2c2c2c;
+  border: 1px solid #424242;
   border-radius: 0.3em;
+  color: #e0e0e0;
 }
 .option-div:disabled {
-  color: #000000;
+  color: #9e9e9e;
   cursor: not-allowed;
 }
 #next-button {
@@ -93,16 +98,22 @@ button {
   display: none;
 }
 .incorrect {
-  background-color: #ffdde0;
-  color: #d32f2f;
-  border-color: #d32f2f;
+  background-color: #9f3a38;
+  color: #f44336;
+  border-color: #f44336;
 }
 .correct {
-  background-color: #e7f6d5;
-  color: #689f38;
-  border-color: #689f38;
+  background-color: #558b2f;
+  color: #aed581;
+  border-color: #aed581;
 }
 #user-score {
   font-size: 1.5em;
   color: #ffffff;
+}
+.option-div.selected::after {
+  content: 'Selected'; 
+  color: #4CAF50; 
+  font-size: 1.2em;
+  float: right;
 }
