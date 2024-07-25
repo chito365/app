@@ -2,6 +2,7 @@
 const timeLeft = document.querySelector(".time-left");
 const quizContainer = document.getElementById("container");
 const nextBtn = document.getElementById("next-button");
+const backBtn = document.getElementById("back-button"); // Added reference
 const countOfQuestion = document.querySelector(".number-of-question");
 const displayContainer = document.getElementById("display-container");
 const scoreContainer = document.querySelector(".score-container");
@@ -1069,6 +1070,16 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
+// Back Button
+backBtn.addEventListener("click", () => {
+  if (questionCount > 0) {
+    questionCount--;
+    countOfQuestion.textContent = `${questionCount + 1} of ${quizArray.length} Questions`;
+    quizDisplay(questionCount);
+    resetTimer();
+  }
+});
+
 // Timer
 const timerDisplay = () => {
   countdown = setInterval(() => {
@@ -1096,6 +1107,9 @@ const quizDisplay = (questionIndex) => {
 
   // Reset selected options for the new question
   selectedOptions.clear();
+
+  // Show or hide the back button
+  backBtn.classList.toggle("hide", questionIndex === 0);
 };
 
 // Quiz Creation
