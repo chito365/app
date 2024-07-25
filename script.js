@@ -1060,7 +1060,7 @@ nextBtn.addEventListener("click", () => {
       scoreContainer.classList.remove("hide");
       userScore.textContent = `Your score is ${scoreCount} out of ${quizArray.length}`;
     } else {
-      countOfQuestion.textContent = `${questionCount + 1} of ${quizArray.length} Questions`;
+      countOfQuestion.textContent = `${questionCount + 1} of ${quizArray.length} Questions (Select ${quizArray[questionCount].correct.length} options)`;
       quizDisplay(questionCount);
       resetTimer();
     }
