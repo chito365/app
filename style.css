@@ -37,15 +37,15 @@ button {
 }
 #display-container {
   background-color: #1e1e1e;
-  padding: 3.1em 1.8em;
-  width: 80%;
-  max-width: 37.5em;
+  padding: 1.1em 0.8em;
+  width: 95%;
+  max-width: 95%;
   margin: 0 auto;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  border-radius: 0.6em;
+  border-radius: 0.1em;
   color: #e0e0e0;
 }
 .header {
