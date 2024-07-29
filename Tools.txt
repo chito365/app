@@ -1,0 +1,124 @@
+-------------------------Convert csv to sqlite
+
+import pandas as pd
+from sqlalchemy import create_engine
+
+# Path to your CSV file
+csv_file = '3.csv'
+
+# Read the CSV file into a pandas DataFrame
+df = pd.read_csv(csv_file)
+
+# Specify the SQLite database file name
+db_name = 'data.db'
+
+# Create a SQLAlchemy engine to connect to the SQLite database
+engine = create_engine(f'sqlite:///{db_name}')
+
+# Specify the name of the table to store the data
+table_name = 'wpmt_da_r_reactions'
+
+# Write the data to the SQLite database table
+df.to_sql(table_name, con=engine, if_exists='replace', index=False)
+
+print(f"Data from {csv_file} has been successfully written to {db_name} in table {table_name}.")
+
+
+---------------------- Append to sqlite the outcome of above
+
+import sqlite3
+import shutil
+import os
+
+# Define file names
+source_db = 'data.db'
+destination_db = 'ht10.sqlite'
+final_db = 'ht11.sqlite'
+
+# Check if destination_db exists before copying
+if not os.path.exists(destination_db):
+    raise FileNotFoundError(f"{destination_db} does not exist.")
+
+# Copy ht9.sqlite to ht10.sqlite to keep the original intact
+shutil.copy(destination_db, final_db)
+print(f"Copied {destination_db} to {final_db}")
+
+# Connect to the source and destination databases
+source_conn = sqlite3.connect(source_db)
+source_cursor = source_conn.cursor()
+
+dest_conn = sqlite3.connect(final_db)
+dest_cursor = dest_conn.cursor()
+
+def get_columns(cursor, table_name):
+    cursor.execute(f"PRAGMA table_info([{table_name}])")
+    return {col[1]: col[2] for col in cursor.fetchall()}  # Return a dictionary of columns and their types
+
+def table_exists(cursor, table_name):
+    cursor.execute(f"SELECT name FROM sqlite_master WHERE type='table' AND name='{table_name}'")
+    return cursor.fetchone() is not None
+
+# Process the wpmt_da_r_votes table from the source database
+source_table = 'wpmt_da_r_votes'
+dest_table = 'wpmt_da_r_votes'
+
+# Check if the table exists in the destination database
+if not table_exists(dest_cursor, dest_table):
+    print(f"Table {dest_table} does not exist in {final_db}. Creating table...")
+    
+    # Retrieve the table creation SQL from the source database
+    source_cursor.execute(f"SELECT sql FROM sqlite_master WHERE type='table' AND name='{source_table}'")
+    create_table_sql = source_cursor.fetchone()[0]
+    
+    # Modify the CREATE TABLE statement if necessary (e.g., adjust table name if needed)
+    create_table_sql = create_table_sql.replace(source_table, dest_table)
+    
+    try:
+        dest_cursor.execute(create_table_sql)
+        print(f"Created table {dest_table} in {final_db}")
+    except sqlite3.Error as e:
+        print(f"Error creating table {dest_table}: {e}")
+        dest_conn.close()
+        source_conn.close()
+        exit()
+
+source_columns = get_columns(source_cursor, source_table)
+dest_columns = get_columns(dest_cursor, dest_table)
+
+# Add missing columns to destination database
+for column, column_type in source_columns.items():
+    if column not in dest_columns:
+        try:
+            # Default column_type is TEXT; if required, specify a default or use a more advanced mapping.
+            column_type = column_type if column_type else 'TEXT'
+            dest_cursor.execute(f"ALTER TABLE {dest_table} ADD COLUMN [{column}] {column_type}")
+            print(f"Added column {column} with type {column_type}")
+        except sqlite3.OperationalError as e:
+            print(f"Error adding column {column}: {e}")
+
+# Commit schema changes
+dest_conn.commit()
+
+# Retrieve all records from the source database
+source_cursor.execute(f"SELECT * FROM {source_table}")
+records = source_cursor.fetchall()
+
+# Build the INSERT OR REPLACE statement
+columns = ', '.join([f"[{col}]" for col in source_columns.keys()])
+placeholders = ', '.join(['?' for _ in source_columns])
+sql = f"INSERT OR REPLACE INTO {dest_table} ({columns}) VALUES ({placeholders})"
+
+# Insert records into the destination database
+try:
+    dest_cursor.executemany(sql, records)
+    print("Records successfully inserted into", final_db)
+except sqlite3.Error as e:
+    print(f"Error inserting records: {e}")
+
+# Commit changes and close connections
+dest_conn.commit()
+source_conn.close()
+dest_conn.close()
+
+
+
