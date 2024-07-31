@@ -92,7 +92,7 @@ button {
   color: #ffffff;
   padding: 0.7em 1.8em;
   border-radius: 0.3em;
-  float: right;
+  float: left;
 }
 #back-button {
   font-size: 1em;
@@ -101,7 +101,7 @@ button {
   color: #ffffff;
   padding: 0.7em 1.8em;
   border-radius: 0.3em;
-  float: left;
+  float: right;
 }
 .hide {
   display: none;
